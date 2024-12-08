@@ -666,6 +666,30 @@ textarea {
   z-index: -1;
   width: 44%;
 }
+.hero-section ul.slick-dots {
+  position: absolute;
+  right: 0;
+  top: 393px;
+  background: #6358FF;
+  padding: 200px 22px;
+  text-align: center;
+}
+.hero-section ul.slick-dots li {
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+  border: 1px solid #9992FF;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.hero-section ul.slick-dots li::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: 0;
+}
 .hero-section .hero-right {
   display: inline-block;
   border: 1px solid rgb(29, 26, 26);
@@ -777,31 +801,6 @@ textarea {
 }
 .hero-section .hero-wrapper .hero-right-div .hero-right-image .slider-wrapper .slider-image .slider-image-inner img {
   max-width: 100%;
-}
-.hero-section .hero-wrapper .hero-right-div .hero-right-image .slider-wrapper ul.slick-dots {
-  position: absolute;
-  right: -309px;
-  top: 470px;
-  transform: translateY(-50%);
-  background: #6358FF;
-  padding: 200px 22px;
-  text-align: center;
-}
-.hero-section .hero-wrapper .hero-right-div .hero-right-image .slider-wrapper ul.slick-dots li {
-  height: 36px;
-  width: 36px;
-  line-height: 36px;
-  border: 1px solid #9992FF;
-  border-radius: 50%;
-  margin-bottom: 30px;
-  cursor: pointer;
-  position: relative;
-}
-.hero-section .hero-wrapper .hero-right-div .hero-right-image .slider-wrapper ul.slick-dots li::before {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: 0;
 }
 
 /*==== Header Style One=====================*/
