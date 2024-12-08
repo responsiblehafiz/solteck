@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.play-in {
+  width: 124px;
+  height: 124px;
+  position: absolute;
+  transition: all 0.4s;
+}/*# sourceMappingURL=global.css.map */

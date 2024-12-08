@@ -1,0 +1,122 @@
+/*-- Margin Top --*/
+@for $i from 1 through 140 {
+    .mt-#{1 * $i}{margin-top: 1px * $i;}
+}
+/*-- Margin Bottom --*/
+@for $i from 1 through 140 {
+    .mb-#{1 * $i}{margin-bottom: 1px *$i;}
+}
+/*-- Margin Left --*/
+@for $i from 1 through 100 {
+    .ml-#{1 * $i}{margin-left: 1px * $i;}
+}
+
+/*-- Margin Right --*/
+@for $i from 1 through 100 {
+    .mr-#{1 * $i}{margin-right: 1px *$i;}
+}
+
+/*-- Padding Top --*/
+@for $i from 1 through 150 {
+    .pt-#{1 * $i}{padding-top: 1px *$i;}
+}
+
+/*-- Padding Bottom --*/
+@for $i from 1 through 150 {
+    .pb-#{1 * $i}{padding-bottom: 1px *$i;}
+}
+
+/*-- Padding Left --*/
+@for $i from 1 through 130 {
+    .pl-#{1 * $i}{padding-left: 1px *$i;}
+}
+
+/*-- Padding Right --*/
+@for $i from 1 through 100 {
+    .pr-#{1 * $i}{padding-right: 1px *$i;}
+}
+
+
+
+
+@media (max-width:1399px){
+    @for $i from 1 through 150 {
+      .pt-md-#{1 * $i}{padding-top: 1px *$i;}
+    }
+    @for $i from 1 through 150 {
+      .pb-md-#{1 * $i}{padding-bottom: 1px *$i;}
+    }
+    
+  }
+  
+  
+  @media (max-width:991px){
+    @for $i from 1 through 150 {
+      .pt-sm-#{1 * $i}{padding-top: 1px *$i;}
+    }
+    @for $i from 1 through 150 {
+      .pb-sm-#{1 * $i}{padding-bottom: 1px *$i;}
+    }
+    
+  }
+  
+  
+  @for $i from 1 through 150 {
+    .py-#{$i} {
+      padding-top: #{$i}px;
+      padding-bottom: #{$i}px;
+    }
+  }
+  
+  @media (max-width:1199px){
+    @for $i from 1 through 150 {
+      .py-md-#{$i} {
+        padding-top: #{$i}px;
+        padding-bottom: #{$i}px;
+      }
+   }
+  }
+   
+  @media (max-width:991px){
+    @for $i from 1 through 150 {
+      .py-sm-#{$i} {
+        padding-top: #{$i}px;
+        padding-bottom: #{$i}px;
+      }  
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+// section paddind
+.space {
+    /* Large screens (1200px and above) */
+    @media (min-width: 1200px) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    /* Medium screens (992px to 1199px) */
+    @media (min-width: 992px) and (max-width: 1199px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    /* Small screens (up to 991px) */
+    @media (max-width: 991px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+

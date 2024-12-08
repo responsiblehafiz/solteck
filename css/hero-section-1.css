@@ -1,0 +1,10 @@
+.hero-section {
+  position: relative;
+}
+
+.hero-wrapper {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 100%;
+}/*# sourceMappingURL=hero-section-1.css.map */

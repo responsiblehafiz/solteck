@@ -1,0 +1,110 @@
+
+/* Thm Btn Css */
+.thm-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    span {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none !important;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: #ffffff;
+        padding: 15px 83px 15px 23px;
+        border-radius: 40px;
+        font-family: "Roboto", sans-serif;
+        background-color: transparent;
+        border: 1px solid #3E3E3E;
+        z-index: 2;
+        text-align: center;
+        overflow: hidden;
+        transition: all 500ms ease;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            background-color: $secondary-color;
+            background-position: left center;
+            transition-timing-function: ease-in-out;
+            transition-property: all;
+            transform-origin: left;
+            transform-style: preserve-3d;
+            transform: scaleX(0);
+            transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 0.8s;
+            z-index: -1;
+        }
+    }
+    &:hover{
+        span{
+            color: $header-text ;
+            &::before{
+                transform: scaleX(1.0);
+                transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
+            }
+        }
+    }
+    i {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        background-color: $title-color;
+        border-radius: 50%;
+        font-size: 18px;
+        color: $black-color;
+        transition: 0.5s ease-in-out;
+        overflow: hidden;
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+        z-index: 3;
+        right: 60px;
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 0;
+        //     right: 0;
+        //     top: 0;
+        //     background-color: $secondary-color;
+        //     background-position: right center;
+        //     transition-timing-function: ease-in-out;
+        //     transition-property: all;
+        //     transform-origin: right;
+        //     transform-style: preserve-3d;
+        //     transform: scaleX(0);
+        //     transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 0.8s;
+        //     z-index: -1;
+        // }
+    }
+      &:hover{
+        i{
+            transform: rotate(-45deg);
+            &::after{
+                transform: scaleX(1.0);
+                transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
+            }
+        }
+      }
+}
+
+  
+
+  
+
+  
+  
+
+

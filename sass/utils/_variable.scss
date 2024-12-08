@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+    --theme-color: #e3572b;
+    --theme-color2: #c2df93;
+    --theme-color3: #ecf8f8;
+    --title-color: var(--dark-color);
+    --body-color: var(--gray-color);
+    --dark-color: #063232;
+    --dark-color2: #053131;
+    --dark-color3: #114f4f;
+    --gray-color: #5a7779;
+    --gray-color2: #90b4b6;
+    --white-color: #ffffff;
+    --light-color: #edfbfb;
+    --light-color2: #f4f8ec;
+    --orange-color: #ff9d10;
+    --success-color: #28a745;
+    --error-color: #ff0000;
+    --bs-text-color1: #10171d;
+    --bs-bg-color1: rgba(6, 50, 50, 0.4);
+    --bs-bg-color2: rgba(0, 0, 0, 0.60);
+    --bs-bg-color3: rgba(2, 27, 27, 0.7);
+    --bs-bg-color4: rgba(236, 248, 248, 0.2);
+    --bs-bg-color5: rgba(255, 255, 255, 0.30);
+    --bs-bg-color6: rgba(255, 255, 255, 0.4);
+    --bs-bg-color7: rgba(6,50,50,0.10);
+    --bs-bg-color8: rgba(6, 50, 50, 0.8);
+    --bs-bg-color9: rgba(255, 255, 255, .3);
+    --bs-border-color: rgba(255, 255, 255, 0.10);
+    --bs-border-color2: rgba(255, 255, 255, 0.2);
+    --bs-border-color3: rgba(0, 0, 0, .05);
+    --bs-border-color4: rgba(212, 226, 226, 0.3);
+    --bs-border-color5: rgba(0, 67, 70, 0.10);
+    --bs-border-color6: rgba(6,50,50,0.15);
+    --bs-border-color7: rgba(6, 50, 50, 0.1);
+    --bs-border-color8: #dce4d9;
+    --bs-border-color9: rgba(255, 255, 255, 0.30);
+    --bs-border-color10: rgba(6,50,50,0.10);
+    --bs-border-color11: rgba(255,255,255,0.2);
+    // --title-font: "Inter", sans-serif;
+    // --body-font: "Inter", sans-serif;
+    --icon-font: "Font Awesome 6 Free";
+    // --main-container: 1320px;
+    // --container-gutters: 24px;
+    // --section-space: 120px;
+    // --section-space-mobile: 80px;
+    // --section-space-small-mobile: 60px;
+    // --section-title-space: 70px;
+    // --ripple-ani-duration: 5s;
+}
+
+
+// Font Variation
+$icon-font: var(--icon-font);
+
+$theme-color: var(--bs-bg-color2);
+
+
+// Typography
+$title-font: var(--title-font);
+$body-font: var(--body-font);
+$body-font-size: 16px;
+$body-line-Height: 26px;
+$body-font-weight: 400;
+$p-line-Height: 1.75;
+$p-font-size2: 18px;
+$p-line-height2: 28px;
+
+
+
+
+
+
+$primary-color: #CEFE89;
+$secondary-color:#554AFF;
+$header-text:#BDF95D;
+$header-text2:#F5FFE9;
+$title-color:#AEFE3A;
+$bg-color:#0E0E0E;
+$orange-color:#EE4748;
+$border-color:#3E3E3E;
+$pra-color:#424345;
+$overly-color:rgba(0, 0, 0, 0.60);
+$black-color:#000000;
+$white-color: #ffffff;
+$gray-color: gray;
+
+
+
+$body-font: "Roboto", sans-serif;
+
+
+
+
+
+
+
+
+
+
+
+// Device Variation Breakpoints
+$hd: 1921px;       // Larger than 1920px
+$xxl: 1500px;      // Extra large devices
+$ml: 1399px;       // Medium-large devices
+$xl: 1299px;       // Medium-large devices
+$lg: 1199px;       // Large devices (Laptop)
+$md: 991px;        // Medium devices
+$sm: 767px;        // Small devices
+$xs: 575px;        // Extra small devices
+$vxs: 375px;       // Very small devices
+
+// Laptop Breakpoints
+$laptop-l: 1280px; // Nest Hub Max
+$laptop-m: 1024px; // Nest Hub
+$laptop-s: 912px;  // Surface Pro 7
+
+// Tablet Breakpoints
+$tablet-l: 853px;  // Asus Zenbook Fold
+$tablet-m: 820px;  // iPad Air
+$tablet-s: 540px;  // Surface Duo
+
+// Mobile Breakpoints
+$mobile-xl: 430px; // iPhone 14 Pro Max
+$mobile-l: 414px;  // iPhone XR, Pixel 7, Galaxy S20 Ultra, Galaxy A51/71
+$mobile-m: 390px;  // iPhone 12 Pro
+$mobile-s: 360px;  // Samsung Galaxy S8
