@@ -186,9 +186,8 @@
     customPaging: function (slider, i) {
       return '<button>' +(i+1)+ '</button>';
     },
-    
-    lazyLoad: 'progressive',
-    cssEase: 'linear',
+    // lazyLoad: 'progressive',
+    // cssEase: 'linear',
     appendDots: $(".hero-custom-dots"),
     speed: 1500,
     vertical: true,
