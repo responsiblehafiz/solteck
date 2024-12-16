@@ -52,3 +52,23 @@ h2 {
         line-height: 36px;
     }
 }
+
+
+
+
+body::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: repeating-linear-gradient(
+        45deg, 
+        $title-color 0px, 
+        $title-color 10px, 
+        $secondary-color 10px, 
+        $secondary-color 20px
+    ); 
+    border-radius: 5px;
+    border: 2px solid #002d2d; /* ডার্ক গ্রিন কালার */
+}

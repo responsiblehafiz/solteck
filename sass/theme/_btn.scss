@@ -6,7 +6,7 @@
     align-items: center;
     span {
         position: relative;
-        display: inline-flex;
+        display: inline-block;
         align-items: center;
         justify-content: center;
         vertical-align: middle;
@@ -55,7 +55,7 @@
         }
     }
     i {
-        position: relative;
+        position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -70,7 +70,7 @@
         -webkit-transition: all 500ms ease;
         transition: all 500ms ease;
         z-index: 3;
-        right: 60px;
+        right: 0px;
         // &::after {
         //     content: "";
         //     position: absolute;
@@ -100,6 +100,56 @@
       }
 }
 
+
+
+
+.project-btn{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: $body-font;
+    position: relative;
+    padding: 12px 32px;
+    margin-bottom: 0px;
+    color: $primary-color;
+    background-color: $secondary-color;
+    display: inline-flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2;
+    text-decoration: none;
+    border-radius: 40px;
+    i{
+      font-size: 17px;
+      text-align: center;
+      margin-top: 6px;
+      font-weight: 500;
+      margin-right: 2px;
+    }
+    .hover-effect{
+      position: relative;
+      overflow: hidden;
+      display: block;
+      height: 26px;
+      line-height: 1.66;
+      .effect-1{
+        display: block;
+        height: 100%;
+        position: relative;
+        top: 0%;
+        transition: .3s;
+        line-height: 25px;
+      }
+    }
+    &:hover{
+      color: $primary-color;
+    }
+    &:hover{
+      .effect-1{
+        top: -100%;
+      }
+    }
+  }
+  
   
 
   

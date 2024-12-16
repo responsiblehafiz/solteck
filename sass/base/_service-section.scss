@@ -1,0 +1,226 @@
+.service-section{
+    .service-top{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $border-color2;
+        @media (max-width:767px){
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .success-card{
+            background: $white-color;
+            padding: 24px 50px;
+            text-align: center;
+            .icon{
+                height: 66px;
+                width: 66px;
+                line-height: 66px;
+                background: #FBFFF5;
+                border: 2px solid $box-color;
+                text-align: center;
+                display: inline-block;
+                border-radius: 50%;
+            }
+            .text{
+                h6{
+                    color: $bg-color;
+                    font-size: 18px;
+                    line-height: 28px;
+                    font-weight: 400;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+    .ajax-all-box{
+        display: flex;
+        gap: 10px;
+        margin: 50px 0 60px;
+        @media (max-width:1199px){
+            flex-wrap: wrap;
+        }
+        .ajax-box{
+            padding: 17px 0px;
+            display: flex;
+            gap: 20px;
+            max-width: 256px;
+            width: 100%;
+            border: 1px solid $border-color2;
+            align-items: center;
+            transition: 0.5s;
+            justify-content: center;
+            cursor: pointer;
+            // &:hover,
+            &.active{
+                background: $title-color;
+                .ajax-text{
+                    gap: 20px;
+                    h6{
+                        visibility: visible;
+                        opacity: 1;
+                        padding: 2px 5px;
+                        width: inherit;
+                    }
+                    h5{
+                        color: $black-color;
+                    }
+                }
+            }
+            .ajax-text{
+                display: flex;
+                align-items: center;
+                gap: 0px;
+                h5{
+                    font-family: $body-font;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    color: $pra-color;
+                    transition: .5s;
+                    margin: 0;
+                }
+                h6{
+                    margin: 0;
+                    font-family: $body-font;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    color: $white-color;
+                    background-color: $bg-color;
+                    transition: .5s;
+                    visibility: hidden;
+                    opacity: 0;
+                    width: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .ajax-tab-content{
+        .ajax-main-area{
+            opacity: 0;
+            visibility: hidden;
+            background: $white-color;
+            height: 0;
+            overflow: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+            position: relative;
+            &.active{
+                padding: 30px;
+                opacity: 1;
+                visibility: visible;
+                height: auto;
+                transform: translateY(0);
+            }
+
+            .ajax-right{
+                .ajax-tittle{
+                    h4{
+                        font-family: $body-font;
+                        font-size: 24px;
+                        font-weight: 500;
+                        line-height: 32px;
+                        color: $black-color;
+                        position: relative;
+                        padding-left: 58px;
+                        &::before{
+                            position: absolute;
+                            content: "";
+                            left: 0;
+                            top: 15px;
+                            background: $title-color;
+                            width: 43px;
+                            height: 1px;
+                        }
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            top: 12px;
+                            left: 0;
+                            width: 7px;
+                            height: 7px;
+                            background: $white-color;
+                            border: 1px solid $title-color;
+                            border-radius: 50%;
+                        }
+                    }
+                    h2{
+                        font-size: 40px;
+                        color: $black-color;
+                        font-family: $body-font;
+                        font-weight: 500;
+                        line-height: 60px;
+                    }
+                    p{
+                        font-family: $body-font;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 26px;
+                        color: $pra-color;
+                    }
+                }
+                .ajax-content{
+                    .service-list{
+                        position: relative;
+                        padding-left: 30px;
+                        &::before{
+                            position: absolute;
+                            content: "";
+                            background: url(../images/service/service-line.png);
+                            top: 5px;
+                            left: 0;
+                            width: 12px;
+                            height: 100px;
+                        }
+                        li{
+                            color: $pra-color;
+                            font-family: $body-font;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 26px;
+                            margin-top: 16px;
+                        }
+                    }
+                    .service-btn{
+                        .thm-btn{
+                            span{
+                                border: 1px solid $btn-border;
+                                color: $bg-color;
+                                transition: .5s;
+                                &:hover{
+                                    color: $white-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .service-btn-inner{
+        .service-down{
+            display: flex;
+            border: 1px solid $btn-border;
+            border-radius: 60px;
+            align-items: center;
+            gap: 30px;
+            margin: 0 auto;
+            padding: 8px 10px 8px 30px;
+            flex-shrink: 0;
+            @media (max-width:767px){
+                flex-direction: column;
+                border-radius: 0;
+            }
+            .text{
+                p{
+                    text-align: center;
+                    margin: 0;
+                    @media (max-width:400px){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,184 @@
+.client-section{
+    .social{
+        img{
+            margin-left: -15px;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        span{
+            margin-left: 20px;
+            font-family: $body-font;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px;
+            color: $white-color;
+        }
+    }
+    .text{
+        h2{
+            font-family: $body-font;
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 60px;
+            color: $white-color;
+            margin: 20px 0;
+        }
+        p{
+            font-family: $body-font;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            color: $white-color;
+        }
+    }
+    .revews{
+        padding: 22px 32px;
+        background: $title-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        @media (max-width:991px){
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        @media only screen and (min-width: 992px) and (max-width: 1399px) {
+            flex-direction: column;
+        }
+        .left{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex: 1;
+            position: relative;
+            &::before{
+                position: absolute;
+                content: "";
+                top: 0;
+                right: 21px;
+                background: $pra-color;
+                height: 54px;
+                width: 1px;
+                @media (max-width:1399px){
+                    display: none;
+                }
+            }
+            &::after{
+                position: absolute;
+                content: "";
+                top: 45%;
+                right: 18px;
+                height: 7px;
+                width: 7px;
+                border-radius: 50%;
+                border: 1px solid #8D8D8D;
+                background: $title-color;
+                @media (max-width:1399px){
+                    display: none;
+                }
+            }
+            .icon{
+                i{
+                    font-size: 40px;
+                    color: $bg-color;
+                }
+            }
+            .text{
+                span{
+                    font-family: $body-font;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 26px;
+                    color: $black-color;
+                }
+            }
+        }
+        .right{
+            .star{
+                font-family: $body-font;
+                font-size: 24px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                color: $bg-color;
+                i{
+                    font-size: 14px;
+                    line-height: 32px;
+                }
+            }
+            .text{
+                p{
+                    font-family: $body-font;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 26px;
+                    color: $border-color;
+                    margin: 0;
+                }
+            }
+        }
+    }
+  .testi-wrapper{
+    margin-left: 60px;
+    @media (max-width:991px){
+        margin-left: 0;
+    }
+        .testimonial-single-box {
+            padding: 48px 62px 40px 62px;
+            background: white;
+            text-align: center;
+            img{
+                display: inline-block;
+                text-align: center;
+            }
+            p{
+                margin: 32px 0 40px;
+                font-family: $body-font;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 28px;
+            }
+            .user{
+                margin: 0;
+                font-family: $body-font;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+                color: $pra-color;
+            }
+            h3{
+                font-family: $body-font;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 32px;
+                color: $black-color;
+            }
+        }
+        button.info-card-arrow-btn{
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            z-index: 2;
+            border: 1px solid $title-color;
+            color: $black-color;
+            background: $white-color;
+            &:hover{
+                background: $title-color;
+            }
+            &.prev-btn{
+                left: -20px;
+                z-index: 2;
+                bottom: 60px;
+            }
+            &.next-btn{
+                right: -20px;
+                top: 60px;
+                background: $title-color;
+            }
+        }
+   }
+}

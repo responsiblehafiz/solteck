@@ -1,0 +1,164 @@
+.about-section{
+    .about-left{
+        .left-text{
+            align-items: start;
+            display: -webkit-inline-box;
+            gap: 40px;
+            align-items: start;
+            margin-bottom: 40px;
+            position: relative;
+            @media (max-width:750px){
+                display: inherit;
+            }
+            @include lg{
+                display: inherit;
+            }
+            &::before{
+                position: absolute;
+                content: "";
+                left: 33px;
+                top: 80px;
+                background: $title-color;
+                height: 60px;
+                width: 1px;
+
+                @include lg{
+                    display: none;
+                }
+                @media (max-width:750px){
+                    display: none;
+                }
+            }
+            &:last-child{
+                &::before{
+                    background: inherit;
+                }
+            }
+                .text{
+                    h2{
+                        font-family: $body-font;
+                        font-size: 32px;
+                        font-weight: 500;
+                        line-height: 40px;
+                        color: $black-color;
+                        cursor: pointer;
+                        transition: .5s;
+                        position: relative;
+                        &::before{
+                            position: absolute;
+                            content: "";
+                            top: 20px;
+                            left: -50px;
+                            height: 2px;
+                            width: 40px;
+                            background: $title-color;
+                            transition: .5s;
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+                    p{
+                        font-family: $body-font;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 26px;
+                        color: $pra-color;
+                        max-width: 80%;
+                    }
+                }
+
+            .icon{
+                height: 70px;
+                width: 70px;
+                line-height: 70px;
+                text-align: center;
+                background: $black-color;
+                border-radius: 50%;
+                display: inline-block;
+                transition: .5s;
+                position: relative;
+                z-index: 2;
+                flex-shrink: 0;
+                img{
+                    width: 24px;
+                    height: 24px;
+                    z-index: 2;
+                    filter: brightness(0) invert(1);
+                }
+                &:before{
+                    position: absolute;
+                    content: "";
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    border-radius: 50%;
+                    background: $title-color;
+                    transform: scale(0);
+                    transition: .5s;
+                    z-index: -2;
+                }
+            }
+            &:hover{
+                .text{
+                    h2{
+                        margin-left: 50px;
+                        &:before{
+                            opacity: 1;
+                            visibility: visible;
+                            // left: 0;
+                        }
+                    }
+                }
+                .icon{
+                    color: red;
+                    &:before{
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+    .about-image {
+        margin-left: 60px;
+        @media (max-width:1199px){
+            margin-left: 0;
+        }
+        img{
+            @media (max-width:767px){
+                width: 100%;
+            }
+        }
+    }
+    .about-counter{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .hero-counter{
+            .count-box{
+                font-size: 36px;
+                color: $bg-color;
+                line-height: 50px;
+                // margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                span{
+                    font-size: 36px;
+                    color: $bg-color;
+                    line-height: 50px;
+                    font-weight: 500;
+                }
+            }
+            h5{
+                color: $bg-color;
+                font-family: $body-font;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+            }
+        }
+    }
+}

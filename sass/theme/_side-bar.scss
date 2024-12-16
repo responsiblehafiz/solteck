@@ -168,14 +168,3 @@
 
 
 
-
-body::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: linear-gradient(120deg, #e74c3c, #f1c40f); 
-    border-radius: 10px;
-    border: 2px solid #2c3e50;
-}

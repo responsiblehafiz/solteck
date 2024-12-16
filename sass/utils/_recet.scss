@@ -34,7 +34,7 @@ h5,
 h6 {
 	font-family: $body-font;
 	color: $title-color;
-	margin-top: 0px;
+	margin: 0px;
 	font-weight: 700;
 	line-height: 1.2;
 }
@@ -70,7 +70,7 @@ ul {
 
 p {
 	font-family: $body-font;
-	font-size: 17px;
+	font-size: 16px;
 	font-weight: 400;
 	color: $pra-color;
 	margin-bottom: 15px;
@@ -133,11 +133,11 @@ input[type="url"],
 textarea{
 	outline: none;
 	background-color: transparent;
-	height: 56px;
+	height: 46px;
 	width: 100%;
 	line-height: 56px;
 	font-size: 15px;
-	color: $black-color;
+	color: $before-color;
 	border: 0;
 	border-bottom: 1px solid #57595C;
 	text-transform: uppercase;
@@ -146,7 +146,7 @@ textarea{
 
 
 	&:focus{
-		border-color: $black-color;
+		border-color: $before-color;
 		&::placeholder{
 			opacity: 0;
 		}

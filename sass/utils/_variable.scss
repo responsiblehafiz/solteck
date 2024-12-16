@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 
 :root {
@@ -39,6 +39,8 @@
     --bs-border-color9: rgba(255, 255, 255, 0.30);
     --bs-border-color10: rgba(6,50,50,0.10);
     --bs-border-color11: rgba(255,255,255,0.2);
+    --main-container: 1320px;
+    --container-gutters: 24px;
     // --title-font: "Inter", sans-serif;
     // --body-font: "Inter", sans-serif;
     --icon-font: "Font Awesome 6 Free";
@@ -76,20 +78,28 @@ $p-line-height2: 28px;
 $primary-color: #CEFE89;
 $secondary-color:#554AFF;
 $header-text:#BDF95D;
+$box-color:#EFFFD8;
 $header-text2:#F5FFE9;
 $title-color:#AEFE3A;
 $bg-color:#0E0E0E;
+$before-color:#CFCFCF;
+$box-color:#FAFAFA;
+$choose-bg:#163838;
+$bg-color2:#F9F9FF;
 $orange-color:#EE4748;
 $border-color:#3E3E3E;
-$pra-color:#424345;
+$border-color2:#F1F0FF;
+$btn-border:#E7E7E7;
+$pra-color:#8D8D8D;
 $overly-color:rgba(0, 0, 0, 0.60);
+$black-color:#000;
 $black-color:#000000;
 $white-color: #ffffff;
 $gray-color: gray;
+$bg-color9:rgba(255, 255, 255, .3);
 
 
-
-$body-font: "Roboto", sans-serif;
+$body-font: "Outfit", sans-serif;
 
 
 

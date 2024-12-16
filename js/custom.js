@@ -24,6 +24,9 @@
     $("#loading").fadeOut(500);
   });
 
+
+
+
   /*===========================================
 	=         Sticky Fix         =
     =============================================*/
@@ -129,6 +132,49 @@
     $(".mobile-menu-wrapper").mobilemenu();
   }
 
+
+   /*===========================================
+	=         Magic Cursor         =
+    =============================================*/
+
+      // Add the custom cursor element to the body
+      $("body").append('<div class="magic-cursor"></div>');
+
+      var cursor = $(".magic-cursor");
+
+      // Update cursor position on mouse move
+      $(window).on("mousemove", function (e) {
+          cursor.css({
+              transform: "translate(" + (e.clientX - 15) + "px," + (e.clientY - 15) + "px)",
+              visibility: "inherit"
+          });
+      });
+
+      // Handle hover states for links and buttons
+      $("a, button, .theme-button, .scroll-top").on("mouseenter", function () {
+          cursor.addClass("cursor-grow");
+      });
+
+      $("a, button, .theme-button, .scroll-top").on("mouseleave", function () {
+          cursor.removeClass("cursor-grow");
+      });
+
+    // smooth scroolling
+
+      const lenis = new Lenis();
+      lenis.on('scroll', (e) => {
+          // console.log(e);
+      });
+
+      function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+
+
+
   /*===========================================
 	=         Popup Sidebox         =
     =============================================*/
@@ -206,4 +252,205 @@
       },
     ],
   });
+
+
+
+
+
+
+    /*===========================================
+  =         Counter Up Odometer         =
+  =============================================*/
+
+  if ($('.count-number').length) {
+    $('.count-number').appear(function () {
+        var odo = $(this); 
+        var countNumber = odo.attr("data-count");
+
+        odo.html(countNumber);
+
+        setTimeout(function () {
+            odo.html(countNumber);
+        }, 1000);
+    }, {
+        accY: 0
+    });
+}
+    /*
+       Jquery Tilt Js
+       ============================*/
+       $(".tilt-animate").tilt({
+        maxTilt: 12,
+        perspective: 700,
+      });
+
+
+
+          /*===========================================
+	=         Marquee Active         =
+    =============================================*/
+
+      if ($(".marquee_mode").length) {
+          $('.marquee_mode').marquee({
+              speed: 40,
+              gap: 0,
+              delayBeforeStart: 0,
+              direction: 'left',
+              duplicated: true,
+              pauseOnHover: true,
+              startVisible: true,
+          });
+      }
+  
+
+
+
+
+
+         // service tab option ===============
+
+
+    // Array of button IDs and corresponding tab IDs
+    const buttonTabPairs = [
+      { button: "#ajax-tab-btn-1", tab: "#ajax-tab-1" },
+      { button: "#ajax-tab-btn-2", tab: "#ajax-tab-2" },
+      { button: "#ajax-tab-btn-3", tab: "#ajax-tab-3" },
+      { button: "#ajax-tab-btn-4", tab: "#ajax-tab-4" },
+      { button: "#ajax-tab-btn-5", tab: "#ajax-tab-5" }
+  ];
+
+  buttonTabPairs.forEach(pair => {
+      $(pair.button).click(function () {
+          // Add 'active' class to the clicked button and corresponding tab
+          $(pair.button).addClass("active");
+          $(pair.tab).addClass("active");
+
+          // Remove 'active' class from all other buttons
+          buttonTabPairs.forEach(otherPair => {
+              if (otherPair.button !== pair.button) {
+                  $(otherPair.button).removeClass("active");
+              }
+          });
+
+          // Remove 'active' class from all other tabs
+          buttonTabPairs.forEach(otherPair => {
+              if (otherPair.tab !== pair.tab) {
+                  $(otherPair.tab).removeClass("active");
+              }
+          });
+      });
+  });
+
+
+
+      // Progress Bar
+      if ($('.progress-line').length) {
+        $('.progress-line').appear(function () {
+            let el = $(this);
+            let percent = el.data('width');
+            el.css('width', percent + '%');
+        }, {
+            accY: 0
+        });
+    }
+
+
+     //Progress Counter + Text Count
+     $(".count-box").appear(
+      function () {
+          let $t = $(this),
+              n = $t.find(".count-text").attr("data-stop"),
+              r = parseInt($t.find(".count-text").attr("data-speed"), 10);
+
+          if (!$t.hasClass("counted")) {
+              $t.addClass("counted");
+              $({
+                  countNum: $t.find(".count-text").text()
+              }).animate({
+                  countNum: n,
+              }, {
+                  duration: r,
+                  easing: "linear",
+                  step: function () {
+                      $t.find(".count-text").text(Math.floor(this.countNum));
+                  },
+                  complete: function () {
+                      $t.find(".count-text").text(this.countNum);
+                  },
+              });
+          }
+      }, {
+          accY: 0
+      }
+  );
+
+  
+  
+
+
+        // Pricing Card current
+        if ($(".pricing-single-box").length) {
+          $('.pricing-single-box').on('mouseenter', function () {
+              $(this).addClass('current');
+              $('.pricing-single-box').not(this).removeClass('current');
+          });
+      }
+
+
+
+      // testimonial area
+      $('.testi-wrapper').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay:true,
+        prevArrow:
+        "<button type='button' class='info-card-arrow-btn prev-btn'><i class='fa-solid fa-arrow-left-long'></i></button>",
+        nextArrow:
+        "<button type='button' class='info-card-arrow-btn next-btn'><i class='fa-solid fa-arrow-right-long'></i></button>",
+      });
+
+
+
+
+         // jarallax
+   if ($('.jarallax').length) {
+    $('.jarallax').jarallax({
+       speed: 0.2,
+    });
+ }
+
+
+if ($('.tp_title_anim').length > 0) {
+  let splitTitleLines = gsap.utils.toArray(".tp_title_anim");
+  splitTitleLines.forEach(splitTextLine => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: splitTextLine,
+            start: 'top 90%',
+            end: 'bottom 60%',
+            scrub: false,
+            markers: false,
+            toggleActions: 'play none none none'
+        }
+      });
+
+      const itemSplitted = new SplitText(splitTextLine, { type: "words, lines" });
+      gsap.set(splitTextLine, { perspective: 400 });
+      itemSplitted.split({ type: "lines" })
+      tl.from(itemSplitted.lines, {
+        duration: 1,
+        delay: 0.3,
+        opacity: 0,
+        rotationX: -80,
+        force3D: true,
+        transformOrigin: "top center -50",
+        stagger: 0.1
+      });
+  });
+}
+  
+
+
+
 })(jQuery);

@@ -1,6 +1,27 @@
 .hero-section {
   padding: 210px 0px 80px;
   position: relative;
+  .hero-social-wrapper{
+    position: absolute;
+    left: 40px;
+    top: 350px;
+    .hero-social-border{
+      margin-left: 10px;
+    }
+    .hero-link{
+      ul{
+        li{
+          margin-top: 20px;
+          a{
+            color: $pra-color;
+            &:hover{
+              color: $white-color;
+            }
+          }
+        }
+      }
+    }
+ }
 
   .slider-bg {
     background: $secondary-color;
@@ -10,14 +31,27 @@
     height: 100%;
     z-index: -1;
     width: 44%;
+    @media (max-width:1399px){
+      background: transparent;
+    }
   }
   ul.slick-dots {
     position: absolute;
     right: 0;
-    top: 393px;
+    top: 377px;
     background: #6358FF;
     padding: 200px 22px;
     text-align: center;
+    @media (max-width:1199px){
+      display: inline-block;
+      left: 0;
+      top: 1410px;
+      background: transparent;
+      text-align: center;
+    }
+    @media (max-width:767px){
+      display: none !important;
+    }
     li{
         height: 36px;
         width: 36px;
@@ -27,11 +61,30 @@
         margin-bottom: 30px;
         cursor: pointer;
         position: relative;
+        transition: .5s;
+        &.slick-active{
+          background: $title-color;
+          color: $black-color;
+        }
         &::before{
             position: absolute;
             bottom: 0;
             left: 0;
             background: blue($color: #000000);
+        }
+        @include lg{
+          display: inline-block;
+          align-items: center;
+          justify-content: center;
+          margin-left: 10px;
+          transform: translateX(-430%);
+        }
+        @include md{
+          display: inline-block;
+          align-items: center;
+          justify-content: center;
+          margin-left: 10px;
+          transform: translateX(inherit);
         }
     }
 }
@@ -46,6 +99,16 @@
     position: absolute;
     top: -180px;
     left: 315px;
+    // display: none;
+    @include lg{
+      left: 675px;
+    }
+    @media (max-width:767px){
+      left: 125px;
+    }
+    @media (max-width:425px){
+      left: 75px;
+    }
     .circle {
       position: relative;
       height: 200px;
@@ -82,6 +145,9 @@
       position: absolute;
       top: -50px;
       left: 0px;
+      @media (max-width:767px){
+        display: none;
+      }
     }
   }
   .hero-tir_shape img {
@@ -93,8 +159,9 @@
   .hero-card_shape img {
     position: absolute;
     bottom: 130px;
-    left: 450px;
+    left: 430px;
     z-index: 2;
+    display: none;
   }
   .hero-title {
     padding-top: 120px;
@@ -102,6 +169,18 @@
       font-size: 80px;
       color: $white-color;
       line-height: 110px;
+      @include xl{
+        font-size: 60px;
+      }
+      @include md{
+        font-size: 70px;
+      }
+      @media only screen and (min-width: 400px) and (max-width: 767px){
+        font-size: 50px;
+      }
+      @media (max-width:399px){
+        font-size: 40px;
+      }
       span {
         color: $header-text;
       }
@@ -111,6 +190,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
     .social {
       display: flex;
       align-items: center;
@@ -147,14 +227,32 @@
     }
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 25px;
+    @media (max-width:1199px){
+      flex-direction: column;
+      align-items: inherit;
+    }
 
     .hero-right-div {
         width: 670px;
+        flex: 1;
+        overflow: hidden;
+        @include xl{
+          width: 500px;
+        }
+        @media (max-width:767px){
+          width: 500px;
+        }
+        @media (max-width:1199px){
+          width: 100%;
+        }
       .hero-right-image {
         .slider-wrapper {
+          animation: MoveUpDown 2s linear infinite alternate;
+          display: inline-block;
           .slider-image {
             .slider-image-inner {
+              margin-bottom: 30px;
               img {
                 max-width: 100%;
               }

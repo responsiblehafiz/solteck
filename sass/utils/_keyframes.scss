@@ -223,24 +223,24 @@
         transform: translateX(0)
     }
 
-    25% {
-        transform: translateX(40px)
-    }
+    // 25% {
+    //     transform: translateX(20px)
+    // }
 
-    50% {
-        transform: translateX(0)
-    }
+    // 50% {
+    //     transform: translateX(0)
+    // }
 
-    75% {
-        transform: translateX(-40px)
-    }
+    // 75% {
+    //     transform: translateX(-20px)
+    // }
 
     100% {
-        transform: translateX(0)
+        transform: translateX(10%)
     }
 }
 
 .slide-right-to-left {
-    animation: pxl_right_left 12s ease-out infinite;
-    -webkit-animation: pxl_right_left 12s ease-out infinite
+    animation: pxl_right_left 4s linear infinite alternate;
+    // -webkit-animation: pxl_right_left 4s ease-out infinite
 }

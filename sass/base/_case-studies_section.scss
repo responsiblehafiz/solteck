@@ -1,0 +1,76 @@
+.case-studies-section{
+    .case-single-items{
+        position: relative;
+        .case-info{
+            position: absolute;
+            left: 36px;
+            bottom: 32px;
+            transition: all 0.4s ease 0s;
+            display: flex;
+            width: 90%;
+            justify-content: space-between;
+            .case-badge{
+                span{
+                    display: inline-block;
+                    font-size: 14px;
+                    color: $white-color;
+                    font-weight: 400;
+                    line-height: 22px;
+                    padding: 4px 16px;
+                    text-transform: uppercase;
+                    border-radius: 15px;
+                    background-color: rgba(207, 207, 207, 0.2);
+                    border: 0.5px solid $border-color2;
+                    margin-right: 10px;
+                }
+                h4{
+                    color: $white-color;
+                    font-family: $body-font;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                }
+            }
+            .case-btn{
+                a{
+                    span{
+                        padding: 10px 55px 10px 25px;
+                        font-size: 16px;
+                        line-height: 24px;
+                        // border: inherit;
+                        @media (max-width:499px){
+                            display: none;
+                        }
+                    }
+                    i{
+                        height: 45px;
+                        width: 45px;
+                    }
+                    &:hover{
+                        span{
+                            color: $white-color !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .case-pra{
+        display: flex;
+        align-items: center;
+        a{
+            display: inline-block;
+            color: $bg-color;
+            text-decoration: underline;
+            i{
+                transform: rotate(-45deg);
+                color: $secondary-color;
+            }
+        }
+        p{
+            max-width: 80%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

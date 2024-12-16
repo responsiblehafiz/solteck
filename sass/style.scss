@@ -6,10 +6,20 @@
 @import "utils/keyframes";
 
 @import "base/hero-1";
+@import "base/about-section";
+@import "base/marquee-section";
+@import "base/service-section";
+@import "base/choose-section";
+@import "base/pricing-section";
+@import "base/case-studies_section";
+@import "base/client-section";
+@import "base/blog-section";
 
 
 @import "layout/hero";
 @import "layout/header-2";
+@import "layout/section-title";
+@import "layout/footer-section";
 
 
 @import "theme/common";
@@ -19,6 +29,8 @@
 @import "theme/mobile-menu";
 @import "theme/side-bar";
 @import "theme/btn";
+@import "theme/container";
+@import "theme/magic-cursor";
 
 
 

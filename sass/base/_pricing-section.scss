@@ -1,0 +1,211 @@
+.pricing-section{
+    .pricing-single-box{
+        background: $white-color;
+        padding: 0 48px 24px 48px;
+        @include md{
+            padding: 0 28px 24px 28px;
+        }
+        @media only screen and (min-width: 576px) and (max-width: 767px){
+            padding: 0 8px 24px 8px;
+        }
+        @include lg{
+            padding: 0 18px 24px 18px;
+        }
+        @include xl{
+            padding: 0 35px 24px 35px;
+        }
+        &.current,
+        &:hover{
+            .pricing-top{
+                background: $title-color;
+                p{
+                    color: $bg-color;
+                }
+                .icon{
+                    background: $white-color !important;
+                }
+            }
+            .price-btn{
+                a{
+                    span{
+                        color: $white-color !important;
+                        &::before{
+                            transform: scaleX(1.0);
+                            transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
+                        }
+                    }
+                }
+            }
+        }
+        .pricing-box-inner{
+            text-align: center;
+           .pricing-top{
+                text-align: center;
+                display: inline-block;
+                border: 1px solid $border-color2;
+                border-top: none;
+                padding: 0 20px 13px;
+                border-radius: 0 0 100px 100px;
+                padding-top: 24px;
+                transition: .5s;
+              .icon{
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 50%;
+                background: $title-color;
+                display: inline-block;
+                transition: .5s;
+              }
+              .text{
+                h6{
+                    font-family: $body-font;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    color: $bg-color;
+                    margin-top: 6px;
+                }
+              }
+           }
+           .pricing-list{
+                ul{
+                    li{
+                        font-family: $body-font;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 26px;
+                        color: $bg-color;
+                        text-align: left;
+                        border-bottom: 1px dotted $btn-border;
+                        padding-bottom: 8px;
+                        margin-bottom: 16px;
+                        &.cros{
+                            i{
+                                color: #FF0000;
+                            }
+                        }
+                        i{
+                            margin-right: 10px;
+                            color: $title-color;
+                        }
+                    }
+                }
+           }
+           .pricing-down{
+                h2{
+                    font-family: $body-font;
+                    font-size: 40px;
+                    font-weight: 500;
+                    line-height: 60px;
+                    color: $bg-color;
+                    margin-left:10px;
+                    text-align: left;
+                    position: relative;
+                    sup{
+                        font-family: $body-font;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 26px;
+                        color: $bg-color;
+                        position: absolute;
+                        left: -10px;
+                        top: 4px;
+                    }
+                    sub{
+                        font-family: $body-font;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 26px;
+                        color: $bg-color;
+                    }
+                }
+                .price-btn{
+                    a{
+                        span{
+                           padding: 15px 100px 15px 31px; 
+                           border: 1px solid $btn-border;
+                            &::before {
+                                background-color: $bg-color;
+                            }
+                            @media only screen and (min-width: 576px) and (max-width: 767px){
+                                padding: 15px 70px 15px 22px;
+                            }
+                            @include lg{
+                                padding: 15px 60px 15px 21px;
+                            }
+                            @include xl{
+                                padding: 15px 60px 15px 21px;
+                            }
+                            @media (max-width:400px){
+                                padding: 15px 60px 15px 21px;
+                            }
+                        }
+                        &:hover{
+                            span{
+                                color: $white-color !important;
+                            }
+                        }
+                    }
+                }
+           }
+        }
+    }
+
+    .pricing-right{
+        .pricing-list{
+            position: relative;
+            padding-left: 30px;
+            &::before{
+                position: absolute;
+                content: "";
+                background: url(../images/pricing/service-line.png);
+                top: 5px;
+                left: 0;
+                width: 12px;
+                height: 100px;
+            }
+            li{
+                color: $bg-color;
+                font-family: $body-font;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+                margin-top: 16px;
+            }
+        }
+        .contact-option,
+        .social-option
+        {
+            display: flex;
+            align-items: center;
+            i{
+                font-size: 20px;
+                margin-right: 10px;
+                color: $choose-bg;
+            }
+            span{
+                font-size: 18px;
+                line-height: 1.66;
+                color: $choose-bg;
+                font-weight: 400;
+                margin-right: 15px;
+            }
+            a{
+                font-size: 18px;
+                line-height: 1.66;
+                color: $choose-bg;
+                font-weight: 500;
+                transition: all .4s ease 0s;
+                background: linear-gradient($secondary-color 0%, $secondary-color 98%);
+                background-repeat: no-repeat;
+                background-size: 100% 2px;
+                background-position: left 100%;
+                &:hover{
+                    color: $secondary-color;
+                    background-size: 0 2px;
+                }
+            }
+        }
+    }
+}

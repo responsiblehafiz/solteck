@@ -211,6 +211,14 @@
   }
 }
 
+@mixin ml {
+
+	/* Medium Large devices */
+	@media (max-width: #{$ml}) {
+		@content;
+	}
+}
+
 // Nest Hub Device
 @mixin nesthub() {
   @media only screen and (min-width: 992px) and (max-width: 1024px) {
